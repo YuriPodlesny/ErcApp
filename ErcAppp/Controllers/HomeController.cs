@@ -86,5 +86,12 @@ namespace ErcApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            _indication.Dispose();
+            _invoice.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

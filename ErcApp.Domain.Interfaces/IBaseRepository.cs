@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ErcApp.Domain.Interfaces
 {
-    public interface IBaseRepository <T>
+    public interface IBaseRepository<T> : IDisposable
         where T : class
     {
         Task<bool> Create(T entety);
