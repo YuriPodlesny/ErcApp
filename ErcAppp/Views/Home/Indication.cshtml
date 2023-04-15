@@ -1,0 +1,22 @@
+﻿@model IEnumerable<ErcApp.Domain.Core.Indication>
+
+@{
+    ViewData["Title"] = "Таблица показаний приборов учета";
+}
+
+<h2>Таблица показаний приборов учета</h2>
+
+<table class="table">
+    <tr><th>Количество людей</th><th>Холодная вода</th><th>Горячая вода</th><th>Электричество</th><th>Электричество день</th><th>Электричество ночь</th></tr>
+    @foreach (var period in Model)
+    {
+        <tr>
+            <td>@period.PeopleCount</td>
+            <td>@period.ColdWater</td>
+            <td>@period.HotWater</td>
+            <td>@period.Electricity</td>
+            <td>@period.ElectricityDay</td>
+            <td>@period.ElectricityNaght</td>
+        </tr>
+    }
+</table>

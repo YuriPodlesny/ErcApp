@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ErcApp.Domain.Core.Invoice>
+
+@{
+    ViewData["Title"] = "Таблица расчетов";
+}
+
+<h2>Таблица расчетов</h2>
+
+<table class="table">
+    <tr><th>Холодная вода</th><th>Горячая вода</th><th>Нагрев</th><th>Электрэнергия</th><th>Сумма</th></tr>
+    @foreach (var period in Model)
+    {
+        <tr>
+            <td>@period.XBCAmount</td>
+            <td>@period.GBCTHAmount</td>
+            <td>@period.GBCTEAmount</td>
+            <td>@period.EEAmount</td>
+            <td>@period.Sum</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,44 @@
+﻿@model ErcApp.ViewModels.IndexViewModel
+
+@{
+    ViewData["Title"] = "Передать показания приборов учета";
+}
+
+<h2>Передать показания приборов учета</h2>
+
+<form method="post" asp-action="CreateIndication">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="col-md-4">
+        <label asp-for="PeopleCount" class="form-label"></label>
+        <input asp-for="PeopleCount" class="form-control" />
+        <span asp-validation-for="PeopleCount" class="text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="ColdWater" class="form-label"></label>
+        <input asp-for="ColdWater" class="form-control" />
+        <span asp-validation-for="ColdWater" class="text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="HotWater" class="form-label"></label>
+        <input asp-for="HotWater" class="form-control" />
+        <span asp-validation-for="HotWater" class="text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="Electricity" class="form-label"></label>
+        <input asp-for="Electricity" class="form-control" />
+        <span asp-validation-for="Electricity" class="text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="ElectricityNaght" class="form-label"></label>
+        <input asp-for="ElectricityNaght" class="form-control" />
+        <span asp-validation-for="ElectricityNaght" class="text-danger"></span>
+    </div>
+    <div class="col-md-4">
+        <label asp-for="ElectricityDay" class="form-label"></label>
+        <input asp-for="ElectricityDay" class="form-control" />
+        <span asp-validation-for="ElectricityDay" class="text-danger"></span>
+    </div>
+    <div class="mt-3">
+        <input type="submit" value="Отправить" class="btn btn-primary" />
+    </div>
+</form>
